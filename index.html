@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Food - Painel Compartilhado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="Mana Food Logo" class="logo-img">
+        <p>Painel em Tempo Real - Atualiza para todos os usuários conectados!</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <button onclick="adicionar('hotdog')">Hot Dog</button>
+            <div class="contador">Qtd: <span id="hotdog">0</span></div>
+        </div>
+
+        <div class="card">
+            <button onclick="adicionar('salgados')">Salgados</button>
+            <div class="contador">Qtd: <span id="salgados">0</span></div>
+        </div>
+
+        <div class="card">
+            <button onclick="adicionar('arrozdoce')">Arroz Doce</button>
+            <div class="contador">Qtd: <span id="arrozdoce">0</span></div>
+        </div>
+
+        <div class="card">
+            <button onclick="adicionar('bolopote')">Bolo de Pote</button>
+            <div class="contador">Qtd: <span id="bolopote">0</span></div>
+        </div>
+
+        <div class="card">
+            <button onclick="adicionar('espetinhodoce')">Espetinho Doce</button>
+            <div class="contador">Qtd: <span id="espetinhodoce">0</span></div>
+        </div>
+
+        <div class="card">
+            <button onclick="adicionar('caldinho')">Caldinho</button>
+            <div class="contador">Qtd: <span id="caldinho">0</span></div>
+        </div>
+    </main>
+
+    <div class="reset-container">
+        <button class="btn-reset" onclick="zerarTudo()">Zerar Todos os Contadores</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
