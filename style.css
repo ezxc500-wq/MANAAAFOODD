@@ -102,3 +102,16 @@ button:active {
 .btn-reset:hover {
     background-color: #b71c1c;
 }
+/* Ajuste para que o texto dos botões se adapte bem caso seja muito grande */
+button {
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 15px 10px; /* Diminuído o padding lateral para dar mais espaço ao texto */
+    font-size: 16px; /* Reduzido levemente de 18px para 16px para caber os nomes longos */
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    word-wrap: break-word; /* Garante que o texto quebre linha se necessário */
+}
