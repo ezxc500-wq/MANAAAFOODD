@@ -6,19 +6,26 @@
 }
 
 body {
-    /* Define a imagem como fundo, centralizada, e fixa para não rolar com a página */
-    background-image: url('Logo.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    /* Adiciona uma camada levemente esbranquiçada sobre o fundo para manter o texto legível */
-    background-color: rgba(240, 244, 248, 0.85);
-    background-blend-mode: overlay;
-
+    background-image: url('Logo.jpg'); /* Usa a sua imagem Logo.jpg */
+    background-size: cover;            /* Faz a imagem cobrir toda a tela */
+    background-position: center;       /* Centraliza o fundo */
+    background-attachment: fixed;      /* Mantém o fundo fixo ao rolar a página */
     color: #333;
     padding-bottom: 50px;
+}
+
+/* --- AJUSTE NOS CARDS: Leve transparência para o fundo aparecer atrás deles --- */
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Branco com 90% de opacidade */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #e1e8ed;
+    backdrop-filter: blur(5px); /* Efeito sutil de vidro fosco */
 }
 
 header {
@@ -63,21 +70,25 @@ header p {
     border: 1px solid #e1e8ed;
 }
 
-/* Botões com o azul da logo */
 button {
-    background-color: #0d47a1;
+    background-image: linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.85)), url('Logo.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     border: none;
-    padding: 15px 20px;
-    font-size: 18px;
+    padding: 15px 10px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.1s, background-color 0.2s;
+    transition: transform 0.1s, background-color 0.2s, filter 0.2s;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Destaca o texto sobre a imagem */
 }
 
+/* Efeito ao passar o mouse nos botões */
 button:hover {
-    background-color: #0a3781;
+    filter: brightness(1.2); /* Deixa a imagem do botão levemente mais clara */
 }
 
 button:active {
