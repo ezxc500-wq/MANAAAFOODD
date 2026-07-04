@@ -12,18 +12,25 @@ const firebaseConfig = {
 };
 
 
-// 2. INICIALIZAÇÃO DO FIREBASE (Usando a versão mais recente)
+// 2. INICIALIZAÇÃO DO FIREBASE (Atualizado com os novos itens)
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-// Objeto corrigido (sem espaços no nome da variável)
 let quantidadesAtuais = {
     hotdog: 0,
     salgados: 0,
     arrozdoce: 0,
     bolopote: 0,
     espetinhodoce: 0,
-    caldinho: 0
+    caldinho: 0,
+    xburguer: 0,
+    xsalada: 0,
+    xegg: 0,
+    xeggsalada: 0,
+    xbacon: 0,
+    xbaconsalada: 0,
+    xeggbaconsalada: 0,
+    acai: 0
 };
 
 // 3. ESCUTAR MUDANÇAS EM TEMPO REAL
@@ -53,7 +60,7 @@ function adicionar(item) {
     database.ref('vendas/' + item).set(novaQuantidade);
 }
 
-// 5. FUNÇÃO PARA ZERAR O CONTADOR DE TODO MUNDO
+// 5. FUNÇÃO PARA ZERAR O CONTADOR DE TODO MUNDO (Atualizado com os novos itens)
 function zerarTudo() {
     if (confirm("Tem certeza que deseja zerar as vendas de todo mundo?")) {
         const zerados = {
@@ -62,7 +69,15 @@ function zerarTudo() {
             arrozdoce: 0,
             bolopote: 0,
             espetinhodoce: 0,
-            caldinho: 0
+            caldinho: 0,
+            xburguer: 0,
+            xsalada: 0,
+            xegg: 0,
+            xeggsalada: 0,
+            xbacon: 0,
+            xbaconsalada: 0,
+            xeggbaconsalada: 0,
+            acai: 0
         };
         database.ref('vendas').set(zerados);
     }
