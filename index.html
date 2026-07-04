@@ -8,8 +8,9 @@
 </head>
 <body>
 
-    <header>
-        <img src="logo.jpg" alt="Mana Food Logo" class="logo-img">
+   <header>
+        <!-- Substitua 'manafood-logo.jpg' pelo nome real do arquivo da sua imagem -->
+        <img src="Logo.jpg" alt="Manafood Logo" class="logo-img">
         <p>Painel em Tempo Real - Atualiza para todos os usuários conectados!</p>
     </header>
 
@@ -43,7 +44,47 @@
             <button onclick="adicionar('caldinho')">Caldinho</button>
             <div class="contador">Qtd: <span id="caldinho">0</span></div>
         </div>
+    <div class="card">
+    <button onclick="adicionar('xburguer')">X Burguer</button>
+    <div class="contador">Qtd: <span id="xburguer">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xsalada')">X Salada</button>
+    <div class="contador">Qtd: <span id="xsalada">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xegg')">X Egg</button>
+    <div class="contador">Qtd: <span id="xegg">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xeggsalada')">X Egg Salada</button>
+    <div class="contador">Qtd: <span id="xeggsalada">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xbacon')">X Bacon</button>
+    <div class="contador">Qtd: <span id="xbacon">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xbaconsalada')">X Bacon Salada</button>
+    <div class="contador">Qtd: <span id="xbaconsalada">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('xeggbaconsalada')">X Egg Bacon Salada</button>
+    <div class="contador">Qtd: <span id="xeggbaconsalada">0</span></div>
+</div>
+
+<div class="card">
+    <button onclick="adicionar('acai')">Açaí</button>
+    <div class="contador">Qtd: <span id="acai">0</span></div>
+</div>
     </main>
+
 
     <div class="reset-container">
         <button class="btn-reset" onclick="zerarTudo()">Zerar Todos os Contadores</button>
